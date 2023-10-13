@@ -15,10 +15,8 @@ export interface TodoSearchProps {
   onChange: (value: string) => void;
 }
 
-export interface TodoItemProps extends TodoFunctionProps {
-  id: number;
-  task: string;
-  completed: boolean;
+export interface TodoItemProps extends TodoFunctionProps, Task {
+  color: string;
 }
 
 export interface TodoListProps extends TodoFunctionProps {

@@ -12,7 +12,7 @@ import { Task } from "./types/Task";
 import "./App.css";
 
 function App() {
-  const [defaultTasks, setDefaultTasks] = useState(defaultTasksData);
+  const [defaultTasks, setDefaultTasks] = useState<Task[]>(defaultTasksData);
   const [searchValue, setSearchValue] = useState("");
 
   function onToggleTask(id: number) {
@@ -42,7 +42,7 @@ function App() {
   );
 
   return (
-    <div className="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+    <div className="flex sm:justify-center flex-col justify-center px-6 py-12 lg:px-8">
       <TodoCounter
         total={defaultTasks.length}
         count={defaultTasks.filter((task: Task) => task.completed).length}
@@ -54,7 +54,9 @@ function App() {
         onToggle={onToggleTask}
         onDelete={onDeleteTask}
       />
-      <CreateTodoButton tasks={defaultTasks} setTasks={setDefaultTasks} />
+      <div>
+        <CreateTodoButton tasks={defaultTasks} setTasks={setDefaultTasks} />
+      </div>
     </div>
   );
 }

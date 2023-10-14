@@ -55,7 +55,12 @@ function App() {
         onDelete={onDeleteTask}
       />
       <div>
-        <CreateTodoButton tasks={defaultTasks} setTasks={setDefaultTasks} />
+        <CreateTodoButton
+          tasks={defaultTasks}
+          setTasks={setDefaultTasks}
+          editTask={false}
+          taskToEdit={defaultTasksData[1]}
+        />
       </div>
     </div>
   );

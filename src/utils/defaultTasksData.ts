@@ -26,4 +26,14 @@ export const defaultTasksData = [
     endDate: "2020-02-15",
     description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
+  {
+    id: 4,
+    text: "Probando border",
+    completed: false,
+    haveRange: true,
+    initDate: "2020-01-01",
+    endDate: "2020-02-15",
+    description: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    prioritary: true,
+  },
 ];

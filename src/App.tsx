@@ -53,13 +53,13 @@ function App() {
         onEmpty="No hay tareas"
         onToggle={onToggleTask}
         onDelete={onDeleteTask}
+        setTasks={setDefaultTasks}
       />
       <div>
         <CreateTodoButton
           tasks={defaultTasks}
           setTasks={setDefaultTasks}
           editTask={false}
-          taskToEdit={defaultTasksData[1]}
         />
       </div>
     </div>
